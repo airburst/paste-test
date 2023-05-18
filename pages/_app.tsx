@@ -1,5 +1,6 @@
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { Theme } from "@twilio-paste/core/theme";
+import "../styles/fonts.css";
 
 const MyApp: React.FC<React.PropsWithChildren<AppProps>> = ({
   Component,
@@ -7,6 +8,11 @@ const MyApp: React.FC<React.PropsWithChildren<AppProps>> = ({
 }) => {
   return (
     <Theme.Provider theme="default">
+      <style jsx global>{`
+        * {
+          font-family: "museosans";
+        }
+      `}</style>
       <Component {...pageProps} />
     </Theme.Provider>
   );
