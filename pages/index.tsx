@@ -3,21 +3,14 @@ import { Heading } from "@twilio-paste/core/heading";
 import { Box } from "@twilio-paste/core/box";
 import { useUIDSeed } from "@twilio-paste/core/uid-library";
 import type { NextPage } from "next";
-import {
-  Form,
-  FormControl,
-  Label,
-  Select,
-  Option,
-  Input,
-  RadioGroup,
-  Radio,
-  FormActions,
-  Button,
-  List,
-  ListItem,
-  Text,
-} from "@twilio-paste/core";
+import { Form, FormControl, FormActions } from "@twilio-paste/core/form";
+import { Label } from "@twilio-paste/core/label";
+import { Select, Option } from "@twilio-paste/core/select";
+import { Input } from "@twilio-paste/core/input";
+import { RadioGroup, Radio } from "@twilio-paste/core/radio-group";
+import { Button } from "@twilio-paste/core/button";
+import { List, ListItem } from "@twilio-paste/core/list";
+import { Text } from "@twilio-paste/text";
 
 const Home: NextPage = () => {
   const seed = useUIDSeed();
