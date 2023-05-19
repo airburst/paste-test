@@ -246,13 +246,13 @@
     "colorBackgroundWeak": "rgb(249, 249, 250)"
   },
   "fonts": {
-    "fontFamilyCode": "'TwilioSansMono', Courier, monospace",
-    "fontFamilyDisplay": "'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-    "fontFamilyText": "'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-    "fontFamilyTextChineseSimplified": "'Inter var experimental', 'Inter var', 'Microsoft YaHei New', 微软雅黑, 'Microsoft Yahei', 'Microsoft JhengHei', 宋体, SimSun, sans-serif",
-    "fontFamilyTextChineseTraditional": "'Inter var experimental', 'Inter var', 'Microsoft JhengHei', 微軟正黑體, 'Microsoft JhengHei UI', 'Microsoft YaHei', 微軟雅黑, 宋体, SimSun, sans-serif",
-    "fontFamilyTextJapanese": "'Inter var experimental', 'Inter var', Hiragino Sans, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, Osaka, 'MS PGothic', sans-serif",
-    "fontFamilyTextKorean": "'Inter var experimental', 'Inter var', 'Microsoft JhengHei', 微軟正黑體, 'Microsoft JhengHei UI', 'Microsoft YaHei', 微軟雅黑, 宋体, SimSun, sans-serif"
+    "fontFamilyCode": "Courier, monospace",
+    "fontFamilyDisplay": "museosans, Arial, sans-serif",
+    "fontFamilyText": "museosans, Arial, sans-serif",
+    "fontFamilyTextChineseSimplified": "'Microsoft YaHei New', 微软雅黑, 'Microsoft Yahei', 'Microsoft JhengHei', 宋体, SimSun, sans-serif",
+    "fontFamilyTextChineseTraditional": "'Microsoft JhengHei', 微軟正黑體, 'Microsoft JhengHei UI', 'Microsoft YaHei', 微軟雅黑, 宋体, SimSun, sans-serif",
+    "fontFamilyTextJapanese": "Hiragino Sans, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, Osaka, 'MS PGothic', sans-serif",
+    "fontFamilyTextKorean": "'Microsoft JhengHei', 微軟正黑體, 'Microsoft JhengHei UI', 'Microsoft YaHei', 微軟雅黑, 宋体, SimSun, sans-serif"
   },
   "fontSizes": {
     "fontSize10": "0.625rem",
