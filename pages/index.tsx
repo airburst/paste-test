@@ -1,13 +1,26 @@
 import Head from "next/head";
-import { Anchor } from "@twilio-paste/core/anchor";
 import { Heading } from "@twilio-paste/core/heading";
 import { Box } from "@twilio-paste/core/box";
-import { Paragraph } from "@twilio-paste/core/paragraph";
-import { ListItem, UnorderedList } from "@twilio-paste/core/list";
-import { Separator } from "@twilio-paste/core/separator";
+import { useUIDSeed } from "@twilio-paste/core/uid-library";
 import type { NextPage } from "next";
+import {
+  Form,
+  FormControl,
+  Label,
+  Select,
+  Option,
+  Input,
+  RadioGroup,
+  Radio,
+  FormActions,
+  Button,
+  List,
+  ListItem,
+  Text,
+} from "@twilio-paste/core";
 
 const Home: NextPage = () => {
+  const seed = useUIDSeed();
   return (
     <Box as="main" padding="space70">
       <Head>
@@ -15,56 +28,72 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Heading as="h1" variant="heading10">
-        Welcome to the the Paste Next.JS App!
-      </Heading>
-
-      <Paragraph>
-        Everything you need to get started using Paste in a Production app.
-        Start by editing <code>pages/index.tsx</code>
-      </Paragraph>
-      <Separator orientation="horizontal" verticalSpacing="space120" />
-
-      <Heading as="h2" variant="heading20">
-        Useful links
-      </Heading>
-
-      <UnorderedList>
-        <ListItem>
-          <Heading as="h3" variant="heading30">
-            <Anchor href="https://paste.twilio.design" showExternal>
-              Paste Documentation
-            </Anchor>
-          </Heading>
-          <Paragraph>
-            Start here. Find in-depth information about using the Paste Design
-            System to build your Next app.
-          </Paragraph>
-        </ListItem>
-        <ListItem>
-          <Heading as="h3" variant="heading30">
-            <Anchor href="https://nextjs.org/docs" showExternal>
-              NextJS Documentation
-            </Anchor>
-          </Heading>
-          <Paragraph>
-            Find in-depth information about Next.js features and API.
-          </Paragraph>
-        </ListItem>
-        <ListItem>
-          <Heading as="h3" variant="heading30">
-            <Anchor
-              href="https://vercel.com/import?filter=next.js"
-              showExternal
-            >
-              Deploy
-            </Anchor>
-          </Heading>
-          <Paragraph>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </Paragraph>
-        </ListItem>
-      </UnorderedList>
+      <Form aria-labelledby={seed("your-details")}>
+        <Heading
+          as="h3"
+          variant="heading30"
+          id={seed("your-details")}
+          marginBottom="space0"
+        >
+          Your details
+        </Heading>
+        <FormControl>
+          <Label htmlFor={seed("title")}>Title</Label>
+          <Select id={seed("title")} name="title">
+            <Option value="">Please select</Option>
+            <Option value="Mr">Mr</Option>
+            <Option value="Mrs">Mrs</Option>
+            <Option value="Miss">Miss</Option>
+            <Option value="Ms">Ms</Option>
+            <Option value="Dr">Dr</Option>
+            <Option value="Mx">Mx</Option>
+          </Select>
+        </FormControl>
+        <FormControl>
+          <Label htmlFor={seed("first-name")}>First name</Label>
+          <Input type="text" id={seed("first-name")} name="first-name" />
+        </FormControl>
+        <FormControl>
+          <Label htmlFor={seed("last-name")}>Last name</Label>
+          <Input type="text" id={seed("last-name")} name="last-name" />
+        </FormControl>
+        <Heading as="h3" variant="heading30" marginBottom="space0">
+          Please choose the covers you need
+        </Heading>
+        <Text as="p">
+          <strong>Public / Product Liability</strong>
+        </Text>
+        <Text as="p">
+          Public liability insurance protects you if you injure someone or
+          damage their property in the course of running your business.
+        </Text>
+        <Text as="p">This does not include cover for:</Text>
+        <List as="ul">
+          <ListItem>Customer's goods in your care</ListItem>
+          <ListItem>Damage caused by, or to, your motor vehicle</ListItem>
+          <ListItem>
+            Damage to an item being worked on, unless otherwise stated in your
+            policy documents
+          </ListItem>
+        </List>
+        <Text as="p">
+          Product liability insurance protects you if you sell a product that
+          injures someone or damages their property.
+        </Text>
+        <FormControl>
+          <RadioGroup
+            legend="Address implementation"
+            name="address-implementation"
+          >
+            <Radio value="2000000">£2,000,000</Radio>
+            <Radio value="5000000">£5,000,000</Radio>
+          </RadioGroup>
+        </FormControl>
+        <FormActions>
+          <Button variant="primary">Submit</Button>
+          <Button variant="secondary">Cancel</Button>
+        </FormActions>
+      </Form>
     </Box>
   );
 };
