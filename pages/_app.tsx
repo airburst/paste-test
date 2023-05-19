@@ -12,11 +12,6 @@ const MyApp: React.FC<React.PropsWithChildren<AppProps>> = ({
     // @ts-expect-error acknowledged bug by Paste creators
     // https://github.com/twilio-labs/paste/issues/3239#issuecomment-1553613071
     <CustomizationProvider baseTheme="default" theme={CustomTheme}>
-      <style jsx global>{`
-        * {
-          font-family: "museosans";
-        }
-      `}</style>
       <Component {...pageProps} />
     </CustomizationProvider>
   );

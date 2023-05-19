@@ -74,10 +74,7 @@ const Home: NextPage = () => {
           injures someone or damages their property.
         </Text>
         <FormControl>
-          <RadioGroup
-            legend="Address implementation"
-            name="address-implementation"
-          >
+          <RadioGroup legend="Please choose a cover" name="pl_cover_limit">
             <Radio value="2000000">£2,000,000</Radio>
             <Radio value="5000000">£5,000,000</Radio>
           </RadioGroup>
