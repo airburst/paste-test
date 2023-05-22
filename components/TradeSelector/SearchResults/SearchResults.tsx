@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { Listing } from "../Listing";
 import type { DialogRef, LabelProps, TradeProps } from "../types";
 import { useOnClickOutside } from "../../../hooks/useOnClickOutside";
+import styles from "../styles/shared.module.css";
 
 export type SearchResultsProps = {
   isOpen: boolean;
@@ -36,7 +37,7 @@ export const SearchResults = (props: SearchResultsProps) => {
   const resultRefs = useRef<HTMLButtonElement[]>([]);
   const [focusId, setFocusId] = useState<number>(0);
   const classes = clsx(
-    "chopin/TradeSelectorResults",
+    styles.TradeSelectorResults,
     {
       "--is-open": isOpen,
     },
@@ -142,12 +143,12 @@ export const SearchResults = (props: SearchResultsProps) => {
   return (
     <dialog className={classes} ref={dialogRef} aria-describedby={describedBy}>
       {isLoading ? (
-        <header className="chopin/TradeSelectorListTitle">
+        <header className={styles.TradeSelectorListTitle}>
           {labels.loading}
         </header>
       ) : noResults ? (
-        <header className="chopin/TradeSelectorListTitle">
-          <a href={fallbackUrl} className="chopin/TradeSelectorListTitleLink">
+        <header className={styles.TradeSelectorListTitle}>
+          <a href={fallbackUrl} className={styles.TradeSelectorListTitleLink}>
             {labels.noResults}
           </a>
         </header>

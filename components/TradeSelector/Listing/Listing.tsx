@@ -1,7 +1,9 @@
-import clsx from "clsx";
+// import clsx from "clsx";
 import { MutableRefObject } from "react";
 import { TradeProps } from "../types";
 import { ListingItem } from "./ListingItem";
+import { UnorderedList } from "@twilio-paste/core/list";
+import styles from "../styles/shared.module.css";
 
 export type ListingProps = {
   title: string;
@@ -20,15 +22,15 @@ export const Listing = (props: ListingProps) => {
     resultRefs,
     refCountStart = 0,
     selectedId,
-    className,
+    // className,
     onClick,
   } = props;
-  const listClasses = clsx("chopin/TradeSelectorList", className);
+  // const listClasses = clsx("chopin/TradeSelectorList", className);
 
   return (
     <nav aria-label={title}>
-      <header className="chopin/TradeSelectorListTitle">{title}</header>
-      <ul className={listClasses}>
+      <header className={styles.TradeSelectorListTitle}>{title}</header>
+      <UnorderedList /* className={listClasses} */>
         {trades.map((trade, i) => {
           const id = refCountStart + i;
           const selected = selectedId === id;
@@ -36,7 +38,7 @@ export const Listing = (props: ListingProps) => {
             <ListingItem
               key={trade.value}
               trade={trade}
-              ref={el => {
+              ref={(el) => {
                 if (!el || !resultRefs) return;
                 resultRefs.current[id] = el;
               }}
@@ -45,7 +47,7 @@ export const Listing = (props: ListingProps) => {
             />
           );
         })}
-      </ul>
+      </UnorderedList>
     </nav>
   );
 };
