@@ -5,6 +5,8 @@
 import clsx from "clsx";
 import { Ref, Key, forwardRef } from "react";
 import { TradeProps } from "../types";
+import { ListItem } from "@twilio-paste/core/list";
+import { Button } from "@twilio-paste/core/button";
 
 export type ListingItemElementType = HTMLButtonElement;
 
@@ -34,19 +36,20 @@ export const ListingItem = forwardRef(
     const handleClick = () => onClick(trade);
 
     return (
-      <li className="chopin/TradeSelectorListItem">
-        <button
+      <ListItem /* className="chopin/TradeSelectorListItem" */>
+        <Button
+          variant="link"
           ref={ref}
           type="button"
           onClick={handleClick}
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: trade.label }}
           className={classes}
           data-key={trade.value}
           // {...hoverProps}
           // {...focusProps}
-        />
-      </li>
+        >
+          <span dangerouslySetInnerHTML={{ __html: trade.label }} />
+        </Button>
+      </ListItem>
     );
   }
 );

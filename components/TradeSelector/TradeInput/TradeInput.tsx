@@ -7,6 +7,8 @@ import { AriaLabelingProps, DOMProps } from "@react-types/shared";
 // import { useHover } from "@react-aria/interactions";
 import { Text } from "@twilio-paste/core/text";
 import { Input } from "@twilio-paste/core/input";
+import { Button } from "@twilio-paste/core/button";
+import { Flex } from "@twilio-paste/core/flex";
 
 export type TradeInputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -58,39 +60,45 @@ export const TradeInput = (props: TradeInputProps) => {
         <Text as="p">
           You have selected ‘<strong>{initialTrade}</strong>’ as your
           trade/profession.{" "}
-          <button
-            type="button"
+          <Button
+            variant="primary"
+            // type="button"
             className="mobius/Link chopin/TradeSelectorButton"
             aria-label="Change your selected profession"
             onClick={onEdit}
           >
             Change
-          </button>
+          </Button>
         </Text>
       ) : (
-        <div className="chopin/TradeSelectorInputContainer">
-          <Input
-            // {...hoverProps}
-            {...inputProps}
-            type="text"
-            placeholder={placeholder}
-            aria-label={label}
-            // className={classes}
-            onChange={onChange}
-            ref={inputRef}
-            value={value}
-          />
-          {isEditable && (
-            <button
-              type="button"
-              className="mobius/Link chopin/TradeSelectorButton"
-              aria-label="Cancel changes"
-              onClick={onEdit}
-            >
-              Cancel
-            </button>
-          )}
-        </div>
+        <Flex vAlignContent="center">
+          <Flex grow paddingRight="space50">
+            <Input
+              // {...hoverProps}
+              {...inputProps}
+              type="text"
+              placeholder={placeholder}
+              aria-label={label}
+              // className={classes}
+              onChange={onChange}
+              ref={inputRef}
+              value={value}
+            />
+          </Flex>
+          <Flex>
+            {isEditable && (
+              <Button
+                variant="link"
+                // type="button"
+                className="mobius/Link chopin/TradeSelectorButton"
+                aria-label="Cancel changes"
+                onClick={onEdit}
+              >
+                Cancel
+              </Button>
+            )}
+          </Flex>
+        </Flex>
       )}
     </div>
   );
