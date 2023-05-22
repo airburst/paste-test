@@ -1,0 +1,28 @@
+.section {
+  padding: 0 var(--size-30);
+}
+
+.innerWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cannot use var(--max-page-width) in media query */
+@media (min-width: 600px) {
+  .innerWrapper {
+    margin: 0 auto;
+    width: var(--max-page-width);
+    padding: 0 16px;
+  }
+}
+
+.light {
+  background-color: #f3f3f3;
+}
+
+.dark {
+  background-color: #0e0a2b;
+}

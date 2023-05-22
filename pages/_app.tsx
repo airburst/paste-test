@@ -1,6 +1,9 @@
+"use client";
+
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 // import { Theme } from "@twilio-paste/core/theme";
 import { CustomizationProvider } from "@twilio-paste/core/customization";
+import "../styles/globals.css";
 import "../styles/fonts.css";
 import CustomTheme from "./themes/theme.json";
 

@@ -1,0 +1,158 @@
+:root,
+:host {
+  /*** Palette ***/
+  /* Azure */
+  --color-azure-200: #f6f5fd;
+  --color-azure-500: #4632d8;
+  --color-azure-600: #2a1e81;
+
+  /* Bubblegum */
+  --color-bubblegum-500: #e943c9;
+  --color-bubblegum-600: #8b2878;
+  --color-bubblegum-700: #2e0d28;
+
+  /* Neutral */
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f3f3f3;
+  --color-neutral-300: #d1d1d2;
+  --color-neutral-400: #747477;
+  --color-neutral-500: #5d5d60;
+  --color-neutral-700: #18181d;
+
+  /* Green */
+  --color-green-300: #e6f3ed;
+  --color-green-500: #008744;
+  --color-green-600: #006633;
+
+  /* Yellow */
+  --color-yellow-300: #fff9e6;
+  --color-yellow-500: #ffba00;
+
+  /* Red */
+  --color-red-300: #f8e7e7;
+  --color-red-500: #b90909;
+
+  /* Blue */
+  --color-blue-300: #e8f1f7;
+  --color-blue-500: #176fae;
+
+  /*** Semantic colours ***/
+  /* Primary */
+  --color-primary: var(--color-azure-500);
+  --color-primary-hover: var(--color-azure-600);
+
+  /* Secondary */
+  --color-secondary: var(--color-bubblegum-500);
+
+  /* Focus */
+  --color-focus: var(--color-secondary);
+
+  /* Text */
+  --color-text: var(--color-neutral-700);
+  --color-text-medium: var(--color-neutral-500);
+  --color-text-inverted: var(--color-neutral-100);
+
+  /* Background */
+  --color-background: var(--color-neutral-100);
+  --color-background-light: var(--color-neutral-200);
+  --color-background-medium: var(--color-neutral-500);
+  --color-background-highlight: var(--color-azure-200);
+
+  /* Border */
+  --color-border: var(--color-neutral-400);
+  --color-border-medium: var(--color-neutral-300);
+  --color-border-light: var(--color-neutral-200);
+
+  /* Info */
+  --color-info: var(--color-blue-500);
+  --color-info-background: var(--color-blue-300);
+
+  /* Warning */
+  --color-warning: var(--color-yellow-500);
+  --color-warning-background: var(--color-yellow-300);
+
+  /* Valid */
+  --color-valid: var(--color-green-500);
+  --color-valid-hover: var(--color-green-600);
+  --color-valid-background: var(--color-green-300);
+
+  /* Error */
+  --color-error: var(--color-red-500);
+  --color-error-background: var(--color-red-300);
+
+  /* Fonts */
+  --font-family-body: museosans, Arial, sans-serif;
+  --font-family-heading: museosansrounded, Arial, sans-serif;
+  --font-size-0: 10px;
+  --font-size-1: 12px;
+  --font-size-2: 14px;
+  --font-size-3: 16px;
+  --font-size-4: 20px;
+  --font-size-5: 25px;
+  --font-size-6: 31px;
+  --font-size-7: 49px;
+  --font-size-8: 61px;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --font-weight-light: 500;
+  --line-height-loose: 1.7;
+  --line-height-tight: 1.2;
+  --line-height-single: 1;
+
+  /* Custom font sizes */
+  --font-size-small-print: var(--font-size-1);
+  --font-size-regular: var(--font-size-3);
+  --font-size-lead: var(--font-size-4);
+  --font-size-small-title: var(--font-size-5);
+  --font-size-title: var(--font-size-6);
+  --font-size-large-title: var(--font-size-7);
+
+  /* Sizing */
+  --size-0: 0px;
+  --size-10: 4px;
+  --size-20: 8px;
+  --size-30: 16px;
+  --size-40: 24px;
+  --size-50: 32px;
+  --size-60: 56px;
+  --size-70: 88px;
+  --size-80: 128px;
+  --size-90: 176px;
+  --size-100: 232px;
+  --size-container: 1200px;
+  --size-inner-container: 626px;
+  --size-focus-ring: 2px;
+  --size-border-width: 2px;
+
+  --radius-0: 2px;
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 16px;
+  --transition-standard: 300ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+:root {
+  --link-color: var(--color-azure-500);
+  --color-background-light: var(--color-azure-200);
+  --color-background-dark: var(--color-azure-600);
+  --text-inverted: var(--color-neutral-100);
+  --max-page-width: 60ch;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  /* font-family: var(--font-family-body);
+  font-size: var(--font-size-3);
+  background-color: var(--color-background); */
+}
