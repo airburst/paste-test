@@ -61,7 +61,7 @@ export const TradeInput = (props: TradeInputProps) => {
           You have selected ‘<strong>{initialTrade}</strong>’ as your
           trade/profession.{" "}
           <Button
-            variant="primary"
+            variant="link"
             // type="button"
             className="mobius/Link chopin/TradeSelectorButton"
             aria-label="Change your selected profession"
